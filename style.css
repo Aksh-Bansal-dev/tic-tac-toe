@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: silver;
+}
+.header-container{
+	text-align: center;
+	margin: 3vh;
+}
+.heading{
+	font-size: 8vh
+}
+.result{
+	margin: 2vh;
+	font-size: 5vh;
+}
+.concon{
+	display: flex;
+	justify-content: space-around;
+}
+.container{
+	display: grid;
+	/*margin-left: 36.5%;*/
+	/*margin-bottom: 2vh;*/
+	height: 60vh;
+	width: 60vh;
+	grid-template-rows: 33% 33% 33%;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-areas: "b1 b2 b3"
+						 "b4 b5 b6"
+						 "b7 b8 b9";
+	/*background: black;*/
+}
+.box1{
+	grid-area: b1;
+	
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+	
+
+}
+.box2{
+	grid-area: b2;
+	border:1px solid black;
+
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+.box3{
+	grid-area: b3;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+.box4{
+	grid-area: b4;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+.box5{
+	grid-area: b5;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+.box6{
+	grid-area: b6;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+.box7{
+	grid-area: b7;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+.box8{
+	grid-area: b8;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+
+.box9{
+	grid-area: b9;
+	border:1px solid black;
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 15vh;
+}
+
+.reset{
+	display: flex;
+	margin-top: 4vh;
+	justify-content:  center;
+	}
+.reset-btn{
+	font-size: 2.5vh;
+	padding: 1vh;
+	width: 20vh;
+
+}
