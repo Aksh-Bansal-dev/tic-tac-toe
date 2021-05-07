@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-This is my first project built and is very basic tic tac toe build without any framework or library.
+Tic-tac-toe with unbeatable AI. 
 
 ## Link to site
 [https://tictactoe-aksh.netlify.com](https://tictactoe-aksh.netlify.com)
@@ -8,4 +8,9 @@ This is my first project built and is very basic tic tac toe build without any f
 ## Built with
 - HTML
 - CSS
-- Javascript(unreadable and unscalable but it works) :sweat_smile:
+- Typescript
+
+## AI
+This app actually uses minimax algorithm to calculate the most optimal move. Basically, it calculates every possible outcome and then pick one with most points(most optimal).
+It also considers that the other player will also choose the move which has least points(most optimal for him).
+
