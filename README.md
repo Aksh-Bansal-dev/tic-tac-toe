@@ -3,7 +3,7 @@
 Tic-tac-toe with unbeatable AI. 
 
 ## Link to site
-[https://tictactoe-aksh.netlify.com](https://tictactoe-aksh.netlify.com)
+[https://aksh-bansal-dev.github.io/tic-tac-toe/](https://aksh-bansal-dev.github.io/tic-tac-toe/)
 
 ## Built with
 - HTML
