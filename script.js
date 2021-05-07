@@ -10,7 +10,6 @@ function start() {
     console.log("starting..");
     boxs[0].addEventListener("click", function () {
         add(0);
-        console.log("clicked 0");
     });
     boxs[1].addEventListener("click", function () {
         add(1);
@@ -43,7 +42,6 @@ function start() {
 gameover();
 start();
 function add(index) {
-    console.log(count);
     count++;
     if (index >= 0 && arr[index] === null) {
         if (count % 2 === 1) {
@@ -68,59 +66,12 @@ function add(index) {
             result.innerHTML = X + " is the winner!";
             arrFill();
         }
-        // itr++;
         if (count % 2 === 0) {
-            // compAdd();
+            compAdd();
         }
     }
-    else {
-        console.log("not ok" + index);
-    }
-}
-function logic(o) {
-    if (arr[0] === o && arr[1] === o && arr[2] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[3] === o && arr[4] === o && arr[5] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[6] === o && arr[7] === o && arr[8] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[0] === o && arr[3] === o && arr[6] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[1] === o && arr[4] === o && arr[7] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[2] === o && arr[5] === o && arr[8] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[0] === o && arr[4] === o && arr[8] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    if (arr[2] === o && arr[4] === o && arr[6] === o) {
-        result.innerHTML = o + " is the winner!";
-        arrFill();
-        return o;
-    }
-    // if (itr === 9) {
-    //   result.innerHTML = "Draw";
-    //   return "tie";
+    // else {
+    // console.log("not ok" + index);
     // }
 }
 function arrFill() {
@@ -151,7 +102,7 @@ var compAdd = function () {
             arr[i] = null;
         }
     }
-    console.log(bestMove);
+    // console.log(bestMove);
     add(bestMove);
 };
 var minimax = function (haveToFindMax) {
@@ -176,11 +127,6 @@ var minimax = function (haveToFindMax) {
     return best;
 };
 var hasWon = function () {
-    for (var i = 0; i < 9; i++) {
-        if (arr[i] === null) {
-            return -2;
-        }
-    }
     var symbol = O;
     if (arr[0] === symbol && arr[1] === symbol && arr[2] === symbol) {
         return 1;
@@ -230,6 +176,11 @@ var hasWon = function () {
     }
     else if (arr[2] === symbol && arr[4] === symbol && arr[6] === symbol) {
         return -1;
+    }
+    for (var i = 0; i < 9; i++) {
+        if (arr[i] === null) {
+            return -2;
+        }
     }
     return 0;
 };

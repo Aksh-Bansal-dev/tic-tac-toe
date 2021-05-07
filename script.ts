@@ -49,7 +49,6 @@ gameover();
 start();
 
 function add(index: number): void {
-  console.log(count);
   count++;
   if (index >= 0 && arr[index] === null) {
     if (count % 2 === 1) {
@@ -73,58 +72,11 @@ function add(index: number): void {
     }
 
     if (count % 2 === 0) {
-      // compAdd();
+      compAdd();
     }
   }
   // else {
   // console.log("not ok" + index);
-  // }
-}
-
-function logic(o: ox): string {
-  if (arr[0] === o && arr[1] === o && arr[2] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[3] === o && arr[4] === o && arr[5] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[6] === o && arr[7] === o && arr[8] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[0] === o && arr[3] === o && arr[6] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[1] === o && arr[4] === o && arr[7] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[2] === o && arr[5] === o && arr[8] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[0] === o && arr[4] === o && arr[8] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  if (arr[2] === o && arr[4] === o && arr[6] === o) {
-    result.innerHTML = o + " is the winner!";
-    arrFill();
-    return o;
-  }
-  // if (itr === 9) {
-  //   result.innerHTML = "Draw";
-  //   return "tie";
   // }
 }
 
@@ -159,7 +111,7 @@ const compAdd = (): void => {
       arr[i] = null;
     }
   }
-  console.log(bestMove);
+  // console.log(bestMove);
   add(bestMove);
 };
 
@@ -187,11 +139,6 @@ const minimax = (haveToFindMax: boolean): number => {
 };
 
 const hasWon = (): 1 | 0 | -1 | -2 => {
-  for (let i = 0; i < 9; i++) {
-    if (arr[i] === null) {
-      return -2;
-    }
-  }
   let symbol = O;
   if (arr[0] === symbol && arr[1] === symbol && arr[2] === symbol) {
     return 1;
@@ -228,6 +175,12 @@ const hasWon = (): 1 | 0 | -1 | -2 => {
     return -1;
   } else if (arr[2] === symbol && arr[4] === symbol && arr[6] === symbol) {
     return -1;
+  }
+
+  for (let i = 0; i < 9; i++) {
+    if (arr[i] === null) {
+      return -2;
+    }
   }
 
   return 0;
