@@ -4,7 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "tsc script.ts"
+    "start": "tsc script.ts",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/Aksh-Bansal-dev/tic-tac-toe#readme",
   "devDependencies": {
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "cypress": "^7.3.0"
   }
 }

@@ -1,7 +1,7 @@
 const boxs = document.querySelectorAll(".container div");
 const reset = document.querySelector(".reset-btn");
 const result = document.querySelector(".result");
-let arr = [];
+let arr: string[] | null[] = [];
 
 const O = "O";
 const X = "X";
@@ -40,7 +40,7 @@ function start(): void {
   boxs[8].addEventListener("click", function () {
     add(8);
   });
-  reset.addEventListener("click", function () {
+  reset!.addEventListener("click", function () {
     gameover();
   });
 }
@@ -62,12 +62,12 @@ function add(index: number): void {
     }
     const winner = hasWon();
     if (winner === 0) {
-      result.innerHTML = "Draw";
+      result!.innerHTML = "Draw";
     } else if (winner === 1) {
-      result.innerHTML = O + " is the winner!";
+      result!.innerHTML = O + " is the winner!";
       arrFill();
     } else if (winner === -1) {
-      result.innerHTML = X + " is the winner!";
+      result!.innerHTML = X + " is the winner!";
       arrFill();
     }
 
@@ -92,7 +92,7 @@ function gameover(): void {
     arr[l] = null;
   }
   count = 1;
-  result.innerHTML = "";
+  result!.innerHTML = "";
   // console.log(arr);
 }
 
