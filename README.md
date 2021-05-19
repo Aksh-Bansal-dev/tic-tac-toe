@@ -1,6 +1,7 @@
 # tic-tac-toe
 
-Tic-tac-toe with unbeatable AI. 
+Tic-tac-toe with unbeatable AI.   
+It is an PWA, so it can be installed.
 
 ## Link to site
 [https://aksh-bansal-dev.github.io/tic-tac-toe/](https://aksh-bansal-dev.github.io/tic-tac-toe/)
