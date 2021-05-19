@@ -1,6 +1,17 @@
 const boxs = document.querySelectorAll(".container div");
 const reset = document.querySelector(".reset-btn");
 const result = document.querySelector(".result");
+
+// Service Worker thing
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("/serviceWorker.js", { scope: "." })
+      .then((_res) => console.log("service worker registered"))
+      .catch((err) => console.log("service worker not registered", err));
+  });
+}
+
 let arr: string[] | null[] = [];
 
 const O = "O";
