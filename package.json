@@ -20,6 +20,6 @@
   "homepage": "https://github.com/Aksh-Bansal-dev/tic-tac-toe#readme",
   "devDependencies": {
     "typescript": "^4.2.4",
-    "cypress": "^7.3.0"
+    "cypress": "^14.5.2"
   }
 }
